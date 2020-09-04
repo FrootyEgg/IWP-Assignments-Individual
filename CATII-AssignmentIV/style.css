@@ -5,7 +5,7 @@
     height: 46px;
     outline: 0;
     margin:10px 1%;
-    border: 1.5px solid #ccc;
+    border: 1.5px solid #aaa;
     border-radius: 5px;
     background: #fff;
     color: #616161;
@@ -18,7 +18,6 @@
     border-color: #0074c2;
     box-shadow: inset 0 1px 1px rgba(126, 162, 185, 0.6), 0 0 8px rgba(126, 162, 185, 0.6);
   }
-  
   .pla .button {
     display: inline-block;
     box-sizing: border-box;
@@ -40,7 +39,7 @@
     margin: 50px 50px 50px 50px;
   }
 
-  #reset {
+  #reset, #hide {
     color: #006AE7;
     background:#fff;
     border: 1px solid #006AE7;
@@ -107,14 +106,6 @@
   
   .pla a:hover{
       color: #000;
-  }
-  .pla img{
-    width: 200px;
-      height: 200px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    margin-left:240px;
   }
   .pla .hov:hover{
     color:rgb(26, 98, 170);

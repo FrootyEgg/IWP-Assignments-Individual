@@ -13,11 +13,8 @@ $(document).ready(function () {
     $("#labelQuo").css("color", "green")
     $("#labelCon").css("color", "green")
     $("#labelCon").css("margin-left", "500px")
-    $("#concession").css("margin-left", "45px")
-    $("#quota").width("510px")
-    $("#concession").width("510px")
-    $("#quota").height("40px")
-    $("#concession").height("40px")
+    $("#speciality").width("510px")
+    $("#speciality").height("40px")
 
     $("#test").click(function () {
         let error = "";
@@ -32,17 +29,12 @@ $(document).ready(function () {
                 }
             }
         }
-        if ($("#usepass").val().length < 7 || $("#usepass").val().length > 12) {
-            error += "=>The Length of the password should always be between 7 and 12\n";
-        }
-        else {
-            for (let i = 0; i < $("#usepass").val().length; i++) {
-                if ($.isNumeric($("#usepass").val()[i])) {
-                    break;
-                }
-                if (i == $("#usepass").val().length - 1) {
-                    error += "=>Password should contain an Integer\n";
-                }
+        for (let i = 0; i < $("#usepass").val().length; i++) {
+            if ($.isNumeric($("#usepass").val()[i])) {
+                break;
+            }
+            if (i == $("#usepass").val().length - 1) {
+                error += "=>Password should contain an Integer\n";
             }
         }
         if ($('#speciality').children("option:selected").val() === "none") {
@@ -58,7 +50,7 @@ $(document).ready(function () {
                 }
             }
             $("#reset").fadeOut("slow", function () {
-                alert("Searching results for the form:\nName:" + $("#usename").val() + "\nFrom:" + $('#from').val() + "\nTo:" + $('#to').val() + "\nFlexible:" + $("#isAvblJobs").prop("checked") + "\nQuota:" + $("#quota").val() + "\nConcession:" + $("#concession").val())
+                alert("Searching results for the form:\nName:" + $("#usename").val() + "\nSpeciality:" + $('#speciality').val() + "\nAvailable for Jobs?:" + $("#isAvblJobs").prop("checked"))
             });
 
         }
@@ -70,9 +62,33 @@ $(document).ready(function () {
     $('#reset').click(function () {
         $("#usename").val("")
         $("#usepass").val("")
-        $("#Male").prop("checked", false);
-        $("#Female").prop("checked", false);
-        $("#isAvblJobs").prop("checked", false);
+        $("#Male").prop("checked", false)
+        $("#Female").prop("checked", false)
+        $("#isAvblJobs").prop("checked", false)
         $("#speciality").val("none")
+    });
+
+    let fadedElements = false;
+
+    $('#hide').click(function () {
+        if (!fadedElements) {
+            $("#usename").val("").fadeOut("slow");
+            $("#usepass").val("").fadeOut("slow");
+            $("#Male").prop("checked", false).fadeOut("slow");
+            $("#Female").prop("checked", false).fadeOut("slow");
+            $("#isAvblJobs").prop("checked", false).fadeOut("slow");
+            $("#speciality").val("none").fadeOut("slow");
+            fadedElements = true;
+        }
+
+        else {
+            $("#usename").val("").fadeIn("slow");
+            $("#usepass").val("").fadeIn("slow");
+            $("#Male").prop("checked", false).fadeIn("slow");
+            $("#Female").prop("checked", false).fadeIn("slow");
+            $("#isAvblJobs").prop("checked", false).fadeIn("slow");
+            $("#speciality").val("none").fadeIn("slow");
+        }
+
     });
 });
