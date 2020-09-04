@@ -20,14 +20,10 @@ $(document).ready(function () {
                 }
             }
         }
-        for (let i = 0; i < $("#usepass").val().length; i++) {
-            if ($.isNumeric($("#usepass").val()[i])) {
-                break;
+            if ($("#usepass").val().length == 0) {
+                error += "=>Password Cannot be Empty\n";
             }
-            if (i == $("#usepass").val().length - 1) {
-                error += "=>Password should contain an Integer\n";
-            }
-        }
+        
         if ($('#speciality').children("option:selected").val() === "none") {
             error += "=>Please Select a Speciality\n";
         }
