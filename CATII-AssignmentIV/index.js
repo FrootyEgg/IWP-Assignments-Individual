@@ -1,18 +1,9 @@
 
-var select = document.getElementById("speciality");
-
 function alt() {
     alert("You clicked on it");
 }
 
-function exchange() {
-    let temp = select.value;
-}
-
 $(document).ready(function () {
-    $("#labelQuo").css("color", "green")
-    $("#labelCon").css("color", "green")
-    $("#labelCon").css("margin-left", "500px")
     $("#speciality").width("510px")
     $("#speciality").height("40px")
 
@@ -51,6 +42,8 @@ $(document).ready(function () {
             }
             $("#reset").fadeOut("slow", function () {
                 alert("Searching results for the form:\nName:" + $("#usename").val() + "\nSpeciality:" + $('#speciality').val() + "\nAvailable for Jobs?:" + $("#isAvblJobs").prop("checked"))
+                var savedText = "<div> Profile Saved </div>";
+                $("#hide").after(savedText);  
             });
 
         }
@@ -92,3 +85,4 @@ $(document).ready(function () {
 
     });
 });
+
