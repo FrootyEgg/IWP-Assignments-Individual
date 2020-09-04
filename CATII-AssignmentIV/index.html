@@ -33,27 +33,24 @@
                             <label class="label" for="usename">
                                 Developer Name
                             </label>
-                            <label class="label" id="labelTo" for="usepass" style="margin-left:430px">
-                                Password
-                            </label><br>
                             <input type="text" class="inputFirst" id="usename" name="usename" />
+                            <br>
+                            <label class="label" id="labelTo" for="usepass">
+                                Password
+                            </label>
                             <input type="password" class="inputFirst" id="usepass" name="usepass"
                                 style="margin-left:34px" />
                         </div>
                         <div class="formGroup">
                             <label class="label" for="from">
-                                FROM
+                                Select Your Speciality
                             </label>
-                            <label class="label" id="labelTo" for="to" style="margin-left:500px">
-                                TO
-                            </label><br>
-                            <select class="inputFirst" id="from" name="From">
+                            <select class="inputFirst" id="quota" name="quota">
+                                <option value="none">None</option>
+                                <option value="Web Development">Web Developer</option>
+                                <option value="Desktop Development">Desktop Developer</option>
+                                <option value="Mobile Development">Mobile Developer</option>
                             </select>
-                            <button type="button" class="btn m-0 p-0" id="exch"><i
-                                    class="fas fa-exchange-alt"></i></button>
-                            <select class="inputFirst" id="to" name="to">
-                            </select>
-                            <span style="margin-left:1%;font-weight:700;font-size:12px">exchange button works</span>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -62,38 +59,17 @@
                             <label style="margin-left:10px;" class="label" for="date">
                                 Gender
                             </label>
-                            <input style="margin-left:8px;" class="input" id="Male" value="Male" type="radio"
+                            <input style="margin-left:10px;" class="input" id="Male" value="Male" type="radio"
                                 name="Gender" class="required">Male</input>
-                            <input style="margin-left:8px;" class="input" id="Female" value="Female" type="radio"
+                            <input style="margin-left:50px;" class="input" id="Female" value="Female" type="radio"
                                 name="Gender">Female</input>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="formGroup">
                             <br>
-                            <input class="label" id="Flexible" type="checkbox" name="Flexible" />
-                            <label for="Flexible" style="font-size:18px;"> Flexible Date</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <!-- <img src={loginImg} alt="none" /> -->
-                        <div class="formGroup">
-                            <label class="label" id="labelQuo" for="quota">
-                                QUOTA
-                            </label>
-                            <label class="label" id="labelCon" for="concession">
-                                CONCESSION
-                            </label><br>
-                            <select class="input" id="quota" name="quota">
-                                <option value="none">None</option>
-                                <option value="Military">Military</option>
-                                <option value="Government Job">Government Job</option>
-                            </select>
-                            <select class="input" id="concession" name="concession">
-                                <option value="none">None</option>
-                                <option value="Toddlers">Toddlers</option>
-                                <option value="Old Age">Old Age</option>
-                            </select>
+                            <input class="label" id="isAvblJob" type="checkbox" name="isAvblJob" />
+                            <label for="isAvblJob" style="font-size:18px;"> Are you open to Job Offers?</label>
                         </div>
                     </div>
                     <div class="col-sm-12">
@@ -108,39 +84,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="partsToComplete">
-                <h5>Parts of Assignment Completed</h5>
-                <ol>
-                    <li style="font-weight:600">Design any web page with HTML form input elements such as Text,
-                        Password, Radio buttons, Check boxes, options, select and submit & reset buttons</li>
-                    <li style="font-weight:600">Validations Present In Form
-                        <ol style="font-weight:400">
-                            <li>Textfield-<span style="color:green">Name should not be empty or have a number </span>
-                            </li>
-                            <li>PasswordField-<span style="color:green">Password should have 7 characters atleast one of
-                                    which should be numeric</span></li>
-                            <li>Select-<span style="color:green">To and from should not be pointing to the same
-                                    destination</span></li>
-                            <li><span style="color:green">Either Male or Female should be checked</span></li>
-                            <li><span style="color:green">If flexible date is not checked then user will get a confirm
-                                    box to confirm his selection</span></li>
-                        </ol>
-                    </li>
-                    <li style="font-weight:600">Apply the following jQuery methodsin HTML web pages for your own:
-                        <ol style="font-weight:400">
-                            <li>Apply animation-<span style="color:green">Added fade in reset</span></li>
-                            <li>remove new HTML elements / contents-<span style="color:green"> Added the options in
-                                    select through a json</span></li>
-                            <li>Apply multiple CSS properties using css() method-<span style="color:green">Quota and
-                                    concession Labels</span></li>
-                            <li>Incorporate jQuery dimension-<span style="color:green">Quota and concession
-                                    textfields</span></li>
-                            <li>Apply jQuery traversing methods-<span style="color:green"> Acheived while validating the
-                                    selected options for to and from select</span></li>
-                        </ol>
-                    </li>
-                </ol>
             </div>
         </div>
     </div>

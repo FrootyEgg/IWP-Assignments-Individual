@@ -61,13 +61,13 @@ $(document).ready(function () {
             error += "=>Please Select your gender\n";
         }
         if (error === "") {
-            if (!$('#Flexible').is(":checked")) {
-                if (confirm("Do you want flexible  dates?")) {
-                    $("#Flexible").prop("checked", true);
+            if (!$('#isAvblJobs').is(":checked")) {
+                if (confirm("Please select the checkbox if are you open to job Offers!")) {
+                    $("#isAvblJobs").prop("checked", true);
                 }
             }
             $("#reset").fadeOut("slow", function () {
-                alert("Searching results for the form:\nName:" + $("#usename").val() + "\nFrom:" + $('#from').val() + "\nTo:" + $('#to').val() + "\nFlexible:" + $("#Flexible").prop("checked") + "\nQuota:" + $("#quota").val() + "\nConcession:" + $("#concession").val())
+                alert("Searching results for the form:\nName:" + $("#usename").val() + "\nFrom:" + $('#from').val() + "\nTo:" + $('#to').val() + "\nFlexible:" + $("#isAvblJobs").prop("checked") + "\nQuota:" + $("#quota").val() + "\nConcession:" + $("#concession").val())
             });
 
         }
@@ -83,7 +83,7 @@ $(document).ready(function () {
         $('#to').val("ABU ROAD")
         $("#Male").prop("checked", false);
         $("#Female").prop("checked", false);
-        $("#Flexible").prop("checked", false);
+        $("#isAvblJobs").prop("checked", false);
         $("#quota").val("none")
         $("#concession").val("none")
     });
